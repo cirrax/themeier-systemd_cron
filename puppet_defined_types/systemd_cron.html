@@ -71,7 +71,9 @@
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
-    
+    <p>systemd_cron
+Create systemd timer/service to replace cron jobs</p>
+
   </div>
 </div>
 <div class="tags">
@@ -86,6 +88,11 @@
         <span class='type'>(<tt>String</tt>)</span>
       
       
+      
+        &mdash;
+        <div class='inline'><p>systemd timer OnCalendar= definition when to run the
+service as defined in <a href="https://www.freedesktop.org/software/systemd/man/systemd.time.html">https://www.freedesktop.org/software/systemd/man/systemd.time.html</a></p>
+</div>
       
     </li>
   
@@ -186,7 +193,6 @@
         <pre class="lines">
 
 
-5
 6
 7
 8
@@ -233,10 +239,11 @@
 49
 50
 51
-52</pre>
+52
+53</pre>
       </td>
       <td>
-        <pre class="code"><span class="info file"># File 'manifests/init.pp', line 5</span>
+        <pre class="code"><span class="info file"># File 'manifests/init.pp', line 6</span>
 
 define systemd_cron (
   String            $on_calendar,
@@ -293,7 +300,7 @@ define systemd_cron (
 </div>
 
       <div id="footer">
-  Generated on Tue Mar 21 18:24:45 2017 by
+  Generated on Tue Mar 21 18:51:26 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.8 (ruby-2.3.3).
 </div>
