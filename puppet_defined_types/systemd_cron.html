@@ -85,12 +85,12 @@ Create systemd timer/service to replace cron jobs</p>
         <p class="example_title"><div class='inline'><p>Usage</p>
 </div></p>
       
-      <pre class="example code"><code><span class='backtick'>`</span><span class='tstring_content'>systemd_cron { &#39;date&#39;:
+      <pre class="example code"><code>systemd_cron { &#39;date&#39;:
   on_calendar         =&gt; &#39;*:0/10&#39;,
   command             =&gt; &#39;/bin/date&#39;,
   service_description =&gt; &#39;Print date&#39;,
   timer_description   =&gt; &#39;Run date.service every 10 minutes&#39;,
-}</span><span class='tstring_end'>`</span></span></code></pre>
+}</code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -352,7 +352,7 @@ define systemd_cron (
 </div>
 
       <div id="footer">
-  Generated on Tue Mar 21 19:55:53 2017 by
+  Generated on Fri Mar 31 08:56:50 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.8 (ruby-2.3.3).
 </div>
