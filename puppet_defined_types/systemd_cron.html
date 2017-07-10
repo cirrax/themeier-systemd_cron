@@ -71,8 +71,8 @@
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
-    <p>systemd_cron
-Create systemd timer/service to replace cron jobs</p>
+    
+<p>systemd_cron Create systemd timer/service to replace cron jobs</p>
 
   </div>
 </div>
@@ -82,7 +82,8 @@ Create systemd timer/service to replace cron jobs</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Usage</p>
 </div></p>
       
       <pre class="example code"><code>systemd_cron { &#39;date&#39;:
@@ -106,8 +107,10 @@ Create systemd timer/service to replace cron jobs</p>
       
       
         &mdash;
-        <div class='inline'><p>systemd timer OnCalendar= definition when to run the
-service as defined in <a href="https://www.freedesktop.org/software/systemd/man/systemd.time.html">https://www.freedesktop.org/software/systemd/man/systemd.time.html</a></p>
+        <div class='inline'>
+<p>systemd timer OnCalendar= definition when to run the service as defined in
+<a
+href="https://www.freedesktop.org/software/systemd/man/systemd.time.html">www.freedesktop.org/software/systemd/man/systemd.time.html</a></p>
 </div>
       
     </li>
@@ -122,8 +125,10 @@ service as defined in <a href="https://www.freedesktop.org/software/systemd/man/
       
       
         &mdash;
-        <div class='inline'><p>command string for ExecStart= defintion of the service to run
-as defined in <a href="https://www.freedesktop.org/software/systemd/man/systemd.service.html">https://www.freedesktop.org/software/systemd/man/systemd.service.html</a></p>
+        <div class='inline'>
+<p>command string for ExecStart= defintion of the service to run as defined in
+<a
+href="https://www.freedesktop.org/software/systemd/man/systemd.service.html">www.freedesktop.org/software/systemd/man/systemd.service.html</a></p>
 </div>
       
     </li>
@@ -138,8 +143,9 @@ as defined in <a href="https://www.freedesktop.org/software/systemd/man/systemd.
       
       
         &mdash;
-        <div class='inline'><p>string for Description= defintion of the service
-as defined in <a href="https://www.freedesktop.org/software/systemd/man/systemd.service.html">https://www.freedesktop.org/software/systemd/man/systemd.service.html</a></p>
+        <div class='inline'>
+<p>string for Description= defintion of the service as defined in <a
+href="https://www.freedesktop.org/software/systemd/man/systemd.service.html">www.freedesktop.org/software/systemd/man/systemd.service.html</a></p>
 </div>
       
     </li>
@@ -149,14 +155,15 @@ as defined in <a href="https://www.freedesktop.org/software/systemd/man/systemd.
         <span class='name'>ensure</span>
       
       
-        <span class='type'>(<tt>Boolean</tt>)</span>
+        <span class='type'>(<tt>Variant[Boolean,Enum['present','absent']]</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>true</tt>)</em>
       
       
         &mdash;
-        <div class='inline'><p>removes the instance if set to false</p>
+        <div class='inline'>
+<p>removes the instance if set to false or absent</p>
 </div>
       
     </li>
@@ -173,8 +180,9 @@ as defined in <a href="https://www.freedesktop.org/software/systemd/man/systemd.
       
       
         &mdash;
-        <div class='inline'><p>optional string for Description= defintion of the service
-as defined in <a href="https://www.freedesktop.org/software/systemd/man/systemd.timer.html">https://www.freedesktop.org/software/systemd/man/systemd.timer.html</a></p>
+        <div class='inline'>
+<p>optional string for Description= defintion of the service as defined in <a
+href="https://www.freedesktop.org/software/systemd/man/systemd.timer.html">www.freedesktop.org/software/systemd/man/systemd.timer.html</a></p>
 </div>
       
     </li>
@@ -191,8 +199,9 @@ as defined in <a href="https://www.freedesktop.org/software/systemd/man/systemd.
       
       
         &mdash;
-        <div class='inline'><p>username to run command User= as defined in
-<a href="https://www.freedesktop.org/software/systemd/man/systemd.service.html">https://www.freedesktop.org/software/systemd/man/systemd.service.html</a></p>
+        <div class='inline'>
+<p>username to run command User= as defined in <a
+href="https://www.freedesktop.org/software/systemd/man/systemd.service.html">www.freedesktop.org/software/systemd/man/systemd.service.html</a></p>
 </div>
       
     </li>
@@ -209,9 +218,11 @@ as defined in <a href="https://www.freedesktop.org/software/systemd/man/systemd.
       
       
         &mdash;
-        <div class='inline'><p>optional array with lines to append to [Timer] section</p>
+        <div class='inline'>
+<p>optional array with lines to append to [Timer] section</p>
 
-<p>example: <code>&#39;additional_timer_params&#39;   =&gt; [ &#39;RandomizedDelaySec=10&#39; ]</code></p>
+<p>example: <code>&#39;additional_timer_params&#39;   =&gt; [
+&#39;RandomizedDelaySec=10&#39; ]</code></p>
 </div>
       
     </li>
@@ -228,9 +239,11 @@ as defined in <a href="https://www.freedesktop.org/software/systemd/man/systemd.
       
       
         &mdash;
-        <div class='inline'><p>optional array with lines to append to [Service] section</p>
+        <div class='inline'>
+<p>optional array with lines to append to [Service] section</p>
 
-<p>example: <code>&#39;additional_service_params&#39; =&gt; [ &#39;OnFailure=status-email-user@%n.service&#39; ]</code></p>
+<p>example: <code>&#39;additional_service_params&#39; =&gt; [
+&#39;OnFailure=status-email-user@%n.service&#39; ]</code></p>
 </div>
       
     </li>
@@ -298,24 +311,26 @@ as defined in <a href="https://www.freedesktop.org/software/systemd/man/systemd.
         <pre class="code"><span class="info file"># File 'manifests/init.pp', line 28</span>
 
 define systemd_cron (
-  String            $on_calendar,
-  String            $command,
-  String            $service_description,
-  String            $timer_description = &quot;timer for ${service_description}&quot;,
-  Boolean           $ensure = true,
-  String            $user = &#39;root&#39;,
-  Optional[Array]   $additional_timer_params   = undef,
-  Optional[Array]   $additional_service_params = undef,
+  String                                    $on_calendar,
+  String                                    $command,
+  String                                    $service_description,
+  String                                    $timer_description         = &quot;timer for ${service_description}&quot;,
+  Variant[Boolean,Enum[&#39;present&#39;,&#39;absent&#39;]] $ensure                    = true,
+  String                                    $user                      = &#39;root&#39;,
+  Optional[Array]                           $additional_timer_params   = undef,
+  Optional[Array]                           $additional_service_params = undef,
 ) {
 
   $file_ensure = $ensure ? {
-    false   =&gt; &#39;absent&#39;,
-    default =&gt; &#39;present&#39;
+    false    =&gt; &#39;absent&#39;,
+    &#39;absent&#39; =&gt; &#39;absent&#39;,
+    default  =&gt; &#39;present&#39;
   }
 
   $service_ensure = $ensure ? {
-    false   =&gt; &#39;stopped&#39;,
-    default =&gt; &#39;running&#39;
+    false    =&gt; false,
+    &#39;absent&#39; =&gt; false,
+    default  =&gt; true,
   }
 
   systemd::unit_file { &quot;${title}_cron.service&quot;:
@@ -328,8 +343,7 @@ define systemd_cron (
       }
     ),
   }
-  -&gt;
-  systemd::unit_file { &quot;${title}_cron.timer&quot;:
+  -&gt; systemd::unit_file { &quot;${title}_cron.timer&quot;:
     ensure  =&gt; $file_ensure,
     content =&gt; epp(&#39;systemd_cron/timer.epp&#39;, {
       &#39;description&#39;       =&gt; $timer_description,
@@ -338,10 +352,9 @@ define systemd_cron (
       }
     ),
   }
-  -&gt;
-  service { &quot;${title}_cron.timer&quot;:
+  -&gt; service { &quot;${title}_cron.timer&quot;:
     ensure =&gt; $service_ensure,
-    enable =&gt; $ensure,
+    enable =&gt; $service_ensure,
   }
 
 }</pre>
@@ -352,9 +365,9 @@ define systemd_cron (
 </div>
 
       <div id="footer">
-  Generated on Fri Mar 31 08:56:50 2017 by
+  Generated on Mon Jul 10 10:44:58 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.8 (ruby-2.3.3).
+  0.9.8 (ruby-2.3.1).
 </div>
 
     </div>
